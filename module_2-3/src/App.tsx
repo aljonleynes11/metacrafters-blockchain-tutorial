@@ -107,8 +107,6 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        
-     
         <h2>Connect to Phantom Wallet</h2>
       </header>
       {provider && !walletKey && (
