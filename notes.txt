@@ -1,0 +1,5 @@
+const to = Keypair.generate();
+
+to get private key
+
+to.secretKey;
