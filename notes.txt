@@ -3,3 +3,9 @@ const to = Keypair.generate();
 to get private key
 
 to.secretKey;
+
+
+
+react===
+useState, change state of variable
+useEffect, when component changes state // event listener mounted in vuejs
