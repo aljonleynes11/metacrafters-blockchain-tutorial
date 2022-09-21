@@ -25,7 +25,6 @@ const getWalletBalance = async () => {
         const connection = new Connection(clusterApiUrl("devnet"), "confirmed");
         // console.log("Connection object is:", connection);
 
-        console.log(`${publicKey} is public key`);
         // console.log(`${privateKey} is private key`);
         // Make a wallet (keypair) from privateKey and get its balance
         const myWallet = await Keypair.fromSecretKey(privateKey);
@@ -62,8 +61,8 @@ const airDropSol = async (_winnerWallet) => {
 const mainFunction = async () => {
     let winnerWallet = process.argv[2];
         
-    if(!winnerWallet){
-        console.log('Wallet is empty ');
+    if(!winnerWallet || winnerWallet.length < 35){
+        console.log('Invalid wallet');
         console.log('Cancelling airdrop');
         return;
     }
